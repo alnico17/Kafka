@@ -1,0 +1,7 @@
+1) Zookeper Server :  D:/kafka_2.12-3.9.0/bin/windows/zookeeper-server-start.bat D:/kafka_2.12-3.9.0/config/zookeeper.properties
+
+2) Kafka Server : D:\kafka_2.12-3.9.0\bin\windows\kafka-server-start.bat D:\kafka_2.12-3.9.0\config\server.properties  
+
+3) Single producer : D:\kafka_2.12-3.9.0\bin\windows\kafka-console-producer.bat --topic first_topic --bootstrap-server localhost:9092
+ 
+4) Single Consumer :  D:\kafka_2.12-3.9.0\bin\windows\kafka-console-consumer.bat --topic first_topic --from-beginning --bootstrap-server localhost:9092
