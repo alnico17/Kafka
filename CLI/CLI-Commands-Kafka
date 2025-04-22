@@ -5,3 +5,14 @@
 3) Single producer : D:\kafka_2.12-3.9.0\bin\windows\kafka-console-producer.bat --topic first_topic --bootstrap-server localhost:9092
  
 4) Single Consumer :  D:\kafka_2.12-3.9.0\bin\windows\kafka-console-consumer.bat --topic first_topic --from-beginning --bootstrap-server localhost:9092
+
+5) Reading message from specific offset inside a specific partition: D:/kafka_2.12-3.9.0/bin/windows/kafka-console-consumer.bat --topic demo_testing  --bootstrap-server localhost:9092 --partition 2 --offset 1
+
+6) Information about Brockers :  D:/kafka_2.12-3.9.0/bin/windows/zookeeper-shell.bat localhost:2181 ls /brokers/ids
+
+
+
+
+---------------------------------Config file---------------------------------------
+
+1) Defining racks for brocker manually : set broker.rack=1 for broker 0 & 1 and broker.rack=2 for broker 2
