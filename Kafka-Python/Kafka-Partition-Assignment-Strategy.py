@@ -52,7 +52,9 @@ class MyConsumerRebalanceListener(kafka.ConsumerRebalanceListener):
 consumer = KafkaConsumer(bootstrap_servers=['localhost:9092'],
                          value_deserializer=lambda m: json.loads(m.decode('utf-8')),
                          group_id='demo112215sgtrjwrykvjh', auto_offset_reset='earliest',
-                         enable_auto_commit=False,partition_assignment_strategy=[RoundRobinPartitionAssignor])
+                         enable_auto_commit=False,partition_assignment_strategy=[RoundRobinPartitionAssignor]) 
+                                                                 # another method is [RangePartitionAssignor]
+
 
 listener = MyConsumerRebalanceListener()
 consumer.subscribe('hello_world',listener=listener)
